@@ -8,10 +8,27 @@ namespace prelim_exam
         static void Main(string[] args)
         {
 
-         
-             
-
-            Console.WriteLine("Hello World!");
+            string[] Amphibians = { "Frog", "Salamander", "Amphiuma" };
+            string[] Fish = { "Milkfish", "Goldfish", "Salmon" };
+            string[] Bird = { "Crow", "Dove", "Pigeon" };
+            string[] Mammal = { "Giraffe", "Deer", "Horse" };
+           
+           foreach(var l in listOfAnimals)
+            {
+                if ($ is Fish || $ is Mammal || $ is Bird)
+                {
+                    Console.WriteLine($.Name);
+                }
+            }  
+           
+           foreach(IPrintAnimalName a in listOfAnimals)
+            {
+                if(a is IPrintAnimalName)
+                {
+                    a.PrintAnimalName();
+                    var temp = (a as Animal).Name; 
+                }
+            }
         }
     }
 }

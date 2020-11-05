@@ -2,16 +2,35 @@
 
 namespace prelim_exam
 {
-    public class Amphibian : Animal
+    public class Amphibian : Animal, IPrintAnimalName
     {
-        public override string GetClass()
-        {
-            throw new NotImplementedException();
-        }
+        public override string GetClass();
 
-        public override string OfType()
+
+
+        public override string OfType();
+
+        public void PrintAnimalName ()
         {
-            throw new NotImplementedException();
+            Console.WriteLine(this.Name);
+
         }
+        
     }
+    public interface IPrintAnimalName
+    {
+        void PrintAnimalName ();
+    }
+
+
+
+    public class Frog : Amphibian
+    {
+        public string Name { get; set; }
+    }
+    public class Salamander : Amphibian
+    {
+        public string Name { get; set; }
+    }
+
 }

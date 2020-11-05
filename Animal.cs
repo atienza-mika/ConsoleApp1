@@ -14,10 +14,10 @@
 
         //Note: This is a auto-implemented getter-setter
         public bool CanSwim { get; set; }
+        public string Name { get; set; }
 
-
-        public abstract string GetClass();
-        public abstract string OfType();
-        public bool HasLegs() => _numberOfLegs > 0;
+        public string GetClass();
+        public string OfType();
+        public bool HasLegs() _numberOfLegs > 0;
     }
 }
